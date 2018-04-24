@@ -1,20 +1,23 @@
 package com.michalpu.zadanie_kalkulator_s;
 
 public class SalaryCalculation {
-    private final String countryCode;
-    private final double grossDailyWageCurrency;
-    private final double netMonthlyWagePLN;
+    private String countryCode;
+    private double grossDailyWageCurrency;
+    private double netMonthlySalaryPLN;
 
-    public SalaryCalculation(String countryCode, double grossDailyWAgeCurrency, double netMonthlyWagePLN) {
+    public SalaryCalculation() {
+    }
+
+    public SalaryCalculation(String countryCode, double grossDailyWAgeCurrency, double netMonthlySalaryPLN) {
         this.countryCode = countryCode;
         this.grossDailyWageCurrency = grossDailyWAgeCurrency;
-        this.netMonthlyWagePLN = netMonthlyWagePLN;
+        this.netMonthlySalaryPLN = netMonthlySalaryPLN;
     }
 
     @Override
     public String toString() {
         return "calculator.domain.CalculationResult [countryCode=" + countryCode + ", grossDailyWAgeCurrency=" + grossDailyWageCurrency
-                + ", netMonthlyWagePLN=" + netMonthlyWagePLN + "]";
+                + ", netMonthlySalaryPLN=" + netMonthlySalaryPLN + "]";
     }
 
     public String getCountryCode() {
@@ -25,9 +28,20 @@ public class SalaryCalculation {
         return grossDailyWageCurrency;
     }
 
-    public double getNetMonthlyWagePLN() {
-        return netMonthlyWagePLN;
+    public double getNetMonthlySalaryPLN() {
+        return netMonthlySalaryPLN;
     }
 
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+    }
+
+    public void setGrossDailyWageCurrency(double grossDailyWageCurrency) {
+        this.grossDailyWageCurrency = grossDailyWageCurrency;
+    }
+
+    public void setNetMonthlySalaryPLN(double netMonthlySalaryPLN) {
+        this.netMonthlySalaryPLN = netMonthlySalaryPLN;
+    }
 
 }

@@ -27,14 +27,4 @@ public class Rate {
         this.mid = mid;
     }
 
-    @Override
-    public String toString() {
-        return "calculator.domain.Rate [no=" + no + ", mid=" + mid + "]";
-    }
-
-
-
-
-
-
 }

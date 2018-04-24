@@ -27,23 +27,4 @@ public enum Country {
         return livingCost;
     }
 
-
-
-    //        this.currencies = new HashMap<>();
-//        this.taxRates = new HashMap<>();
-//        this.costs = new HashMap<>();
-//
-//        this.currencies.put("PL", "PLN");
-//        this.currencies.put("DE", "EUR");
-//        this.currencies.put("UK", "GBP");
-//
-//        this.taxRates.put("PL", 0.19);
-//        this.taxRates.put("UK", 0.25);
-//        this.taxRates.put("DE", 0.20);
-//
-//        this.costs.put("PL", 1200d);
-//        this.costs.put("UK", 600d);
-//        this.costs.put("DE", 800d);
-
-
 }
