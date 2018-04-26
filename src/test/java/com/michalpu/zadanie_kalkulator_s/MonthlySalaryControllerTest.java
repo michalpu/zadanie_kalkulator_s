@@ -24,7 +24,7 @@ public class MonthlySalaryControllerTest extends ZadanieKalkulatorSApplicationTe
         stubNBPClient(200, "EUR", 4.198d);
 
         //when
-        SalaryCalculation forObject = restTemplate.getForObject(localUrl("/calculation?countryCode=DE&grossDailyWage=200")
+        SalaryCalculation forObject = restTemplate.getForObject(localUrl("/calculation?countryCode=DE&grossDailyWageCurrency=200")
                 ,SalaryCalculation.class);
 
         //then
