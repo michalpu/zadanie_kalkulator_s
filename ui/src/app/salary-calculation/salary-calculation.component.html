@@ -1,0 +1,19 @@
+<h2>Wybierz kraj: </h2>
+<ul class="countries">
+  <li *ngFor="let country of countries" (click) = "onSelect(country)">
+    <span class="badge">{{country.name}}</span>
+  </li>
+</ul>
+<div *ngIf="selectedCountry">
+  <h2>{{ selectedCountry.name | uppercase }}</h2>
+  <div>
+    <label>Dzienna stawka w walucie kraju:
+      <input [(ngModel)]="dailyWage" placeholder="Podaj dzienną stawkę brutto">
+    </label>
+  </div>
+  <div>
+    <button (click)="calculate()">Oblicz wynagrodzenie netto w PLN</button>
+  </div>
+  <div><h1><span>Miesięczne wynagrodzenie netto w PLN: </span>{{salaryCalculation.netMonthlySalaryPLN}}</h1></div>
+</div>
+

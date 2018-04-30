@@ -32,16 +32,5 @@ public class SalaryCalculation {
         return netMonthlySalaryPLN;
     }
 
-    public void setCountryCode(String countryCode) {
-        this.countryCode = countryCode;
-    }
-
-    public void setGrossDailyWageCurrency(double grossDailyWageCurrency) {
-        this.grossDailyWageCurrency = grossDailyWageCurrency;
-    }
-
-    public void setNetMonthlySalaryPLN(double netMonthlySalaryPLN) {
-        this.netMonthlySalaryPLN = netMonthlySalaryPLN;
-    }
 
 }
