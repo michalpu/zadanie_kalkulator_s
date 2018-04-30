@@ -12,7 +12,7 @@ public class CalculatorService {
         double tax = (grossMonthlySalary - cost) * taxRate;
         double netMonthlySalary = grossMonthlySalary - tax;
         double netMonthlySalaryPLN = netMonthlySalary * exRate;
-        netMonthlySalaryPLN = Math.round(netMonthlySalaryPLN*100.0)/100.0;
+        netMonthlySalaryPLN = Math.round(netMonthlySalaryPLN * 100.0) / 100.0;
 
         return new SalaryCalculation(country.name(), grossDailyWage, netMonthlySalaryPLN);
 

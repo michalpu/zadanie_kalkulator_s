@@ -7,7 +7,7 @@ public class MonthlySalaryControllerTest extends ZadanieKalkulatorSApplicationTe
 
 
     @Test
-   public void shouldCalculateMonthlyNetSalaryForPLCountryCodeWhenNoParamsGiven() {
+    public void shouldCalculateMonthlyNetSalaryForPLCountryCodeWhenNoParamsGiven() {
         //when
         SalaryCalculation forObject = restTemplate.getForObject(localUrl("/calculation "), SalaryCalculation.class);
 
@@ -19,13 +19,13 @@ public class MonthlySalaryControllerTest extends ZadanieKalkulatorSApplicationTe
     }
 
     @Test
-    public void shouldCalculateMonthlySalaryForDECountryCode(){
+    public void shouldCalculateMonthlySalaryForDECountryCode() {
         //given
         stubNBPClient(200, "EUR", 4.198d);
 
         //when
         SalaryCalculation forObject = restTemplate.getForObject(localUrl("/calculation?countryCode=DE&grossDailyWageCurrency=200")
-                ,SalaryCalculation.class);
+                , SalaryCalculation.class);
 
         //then
         Assert.assertEquals(forObject.getCountryCode(), Country.DE.name());

@@ -14,8 +14,9 @@ public class MonthlySalaryController {
         this.calculatorService = calculatorService;
         this.currencyClient = currencyClient;
     }
+
     @GetMapping("/calculation")
-    public SalaryCalculation getSalaryCalculation (
+    public SalaryCalculation getSalaryCalculation(
             @RequestParam(value = "grossDailyWageCurrency", required = false, defaultValue = "100") double grossDailyWage,
             @RequestParam(value = "countryCode", required = false, defaultValue = "PL") String countryCode) {
 

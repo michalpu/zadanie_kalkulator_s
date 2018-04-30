@@ -22,14 +22,14 @@ import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ZadanieKalkulatorSApplicationTests {
 
-	RestTemplate restTemplate = new RestTemplate();
+    RestTemplate restTemplate = new RestTemplate();
 
 
     @Rule
     public WireMockRule nbpClientRule = new WireMockRule(8089);
 
 
-    public void stubNBPClient(int statusCode, String currencyCode, double exRate){
+    public void stubNBPClient(int statusCode, String currencyCode, double exRate) {
         nbpClientRule.stubFor(get(urlEqualTo("/api/exchangerates/rates/a/" + currencyCode))
                 .willReturn(aResponse()
                         .withStatus(statusCode)
@@ -52,15 +52,15 @@ public class ZadanieKalkulatorSApplicationTests {
     }
 
     @LocalServerPort
-	int port;
+    int port;
 
-	@Test
-	public void contextLoads() {
+    @Test
+    public void contextLoads() {
 
-	}
+    }
 
-	String localUrl(String path){
-	    return "http://localhost:" + port + path;
+    String localUrl(String path) {
+        return "http://localhost:" + port + path;
     }
 
 }
